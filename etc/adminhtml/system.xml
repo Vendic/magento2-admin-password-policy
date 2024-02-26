@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendic" translate="label" sortOrder="10">
+            <label>Vendic</label>
+        </tab>
+        <section id="admin_password_policy" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Admin Password Policy</label>
+            <tab>vendic</tab>
+            <resource>Vendic_AdminPasswordPolicy::vendic_admin_password_policy</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>General Configuration</label>
+                <field id="admin_users_whitelist_ids" translate="label" type="multiselect" sortOrder="10" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Inactive Admin Users Whitelist</label>
+                    <source_model>Vendic\AdminPasswordPolicy\Model\Config\Source\AdminUsers</source_model>
+                    <can_be_empty>1</can_be_empty>
+                    <comment>Please choose inactive admin users to avoid disabling by cron (if inactive > 90 days)</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

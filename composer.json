@@ -1,0 +1,21 @@
+{
+  "name": "vendic/magento2-admin-password-policy",
+  "description": "Implementation of policy for admin passwords.",
+  "type": "magento2-module",
+  "require": {
+    "php": "~8.2.0",
+    "magento/framework": "*",
+    "magento/module-user": "101.2.*"
+  },
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Vendic\\AdminPasswordPolicy\\": ""
+    }
+  }
+}

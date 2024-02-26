@@ -6,7 +6,7 @@ This module adds additional rules for admin passwords. It ensures that the follo
 - Password does not contain 'guest', 'admin', or 'password'.
 - Password has at least one lowercase letter.
 - Password has at least one uppercase letter.
-- Password has at least special character.
+- Password has at least one special character.
 
 Additional rules can be added through `di.xml` to the `rules` constructor parameter of the following class: `Vendic\AdminPasswordPolicy\Plugin\ValidatePassword`
 Additional forbidden words can be added through `di.xml` to the `forbiddenWords` constructor parameter of the following class: `Vendic\AdminPasswordPolicy\Rules\DoesNotContain`

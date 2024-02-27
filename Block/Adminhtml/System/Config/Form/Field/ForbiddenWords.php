@@ -37,6 +37,6 @@ class ForbiddenWords extends AbstractFieldArray
         ]);
 
         $this->_addAfter = false;
-        $this->_addButtonLabel = __('Add field');
+        $this->_addButtonLabel = __('Add Field');
     }
 }

@@ -33,8 +33,7 @@ class ForbiddenWords extends AbstractFieldArray
     public function _prepareToRender()
     {
         $this->addColumn('word', [
-            'label' => __('Word'),
-            'style' => 'width: 180px'
+            'label' => __('Word')
         ]);
 
         $this->_addAfter = false;

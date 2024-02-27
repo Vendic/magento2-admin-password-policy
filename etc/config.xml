@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <admin>
+            <password_policy>
+                <forbidden_words>
+                    <item1>
+                        <word>admin</word>
+                    </item1>
+                    <item2>
+                        <word>password</word>
+                    </item2>
+                    <item3>
+                        <word>qwerty</word>
+                    </item3>
+                    <item4>
+                        <word>qwerty123</word>
+                    </item4>
+                    <item5>
+                        <word>12345</word>
+                    </item5>
+                    <item6>
+                        <word>123456</word>
+                    </item6>
+                    <item7>
+                        <word>123456789</word>
+                    </item7>
+                </forbidden_words>
+            </password_policy>
+        </admin>
+    </default>
+</config>
+

@@ -34,9 +34,9 @@ class DisableInactiveUsers
         $bind = ['is_active' => new Zend_Db_Expr('0')];
         $where = ['logdate <= ?' => $expiredDate];
 
-        $inactiveAdminUsersWhitelistIds = $this->config->getInactiveAdminUsersWhitelistIds();
-        if (!empty($inactiveAdminUsersWhitelistIds)) {
-            $where['user_id NOT IN (?)'] = $inactiveAdminUsersWhitelistIds;
+        $inactiveUsersWhitelistIds = $this->config->getInactiveUsersWhitelist();
+        if (!empty($inactiveUsersWhitelistIds)) {
+            $where['user_id NOT IN (?)'] = $inactiveUsersWhitelistIds;
         }
 
         $connection = $this->resourceConnection->getConnection();

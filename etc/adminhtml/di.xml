@@ -20,15 +20,4 @@
             </argument>
         </arguments>
     </type>
-
-    <type name="Vendic\AdminPasswordPolicy\Rules\DoesNotContain">
-        <arguments>
-            <argument name="forbiddenWords" xsi:type="array">
-                <item name="0" xsi:type="string">bunzl</item>
-                <item name="1" xsi:type="string">guest</item>
-                <item name="2" xsi:type="string">admin</item>
-                <item name="3" xsi:type="string">password</item>
-            </argument>
-        </arguments>
-    </type>
 </config>

@@ -38,10 +38,12 @@ class Config
             return [];
         }
 
-        $wordsData = $this->serialize->unserialize($wordItems);
+        if (is_string($wordItems)) {
+            $wordItems = $this->serialize->unserialize($wordItems);
+        }
 
         $words = [];
-        foreach($wordsData as $data) {
+        foreach($wordItems as $data) {
             $words[] = $data['word'];
         }
 

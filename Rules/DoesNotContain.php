@@ -13,10 +13,9 @@ use Vendic\AdminPasswordPolicy\Rules\RuleInterface;
 class DoesNotContain implements RuleInterface
 {
     /**
-     * @param string[] $forbiddenWords
+     * @param Config $config
      */
     public function __construct(
-        private array $forbiddenWords,
         private Config $config
     )
     {

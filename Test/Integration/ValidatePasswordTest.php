@@ -78,8 +78,8 @@ class ValidatePasswordTest extends TestCase
             ['user' => ['password' => 'Letmein123!someuser'], 'exception' => true],
             ['user' => ['password' => 'Letmein123!email@example.com'], 'exception' => true],
             ['user' => ['password' => 'Letmein123!admin'], 'exception' => true],
-            ['user' => ['password' => 'Letmein123!bunzl'], 'exception' => true],
-            ['user' => ['password' => 'Letmein123!guest'], 'exception' => true],
+            ['user' => ['password' => 'Letmein123!qwerty'], 'exception' => true],
+            ['user' => ['password' => 'Letmein123!123456'], 'exception' => true],
             ['user' => ['password' => 'Letmein123!password'], 'exception' => true],
             ['user' => ['password' => 'Letmein123!'], 'exception' => false],
         ];

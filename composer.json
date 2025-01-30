@@ -3,7 +3,7 @@
   "description": "Implementation of policy for admin passwords.",
   "type": "magento2-module",
   "require": {
-    "php": "~8.2.0",
+    "php": "~8.2.0||~8.3.0",
     "magento/framework": "*",
     "magento/module-user": "101.2.*"
   },

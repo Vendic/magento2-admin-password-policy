@@ -5,8 +5,8 @@
 
 namespace Vendic\AdminPasswordPolicy\Exception;
 
-use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\Validator\Exception;
 
-class InvalidPasswordException extends LocalizedException
+class InvalidPasswordException extends Exception
 {
 }

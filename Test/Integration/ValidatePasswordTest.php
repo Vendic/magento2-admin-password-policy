@@ -11,6 +11,7 @@ use Magento\TestFramework\ObjectManager as TestObjectManager;
 use Magento\User\Model\ResourceModel\User as UserResource;
 use Magento\User\Model\User;
 use Magento\User\Model\UserFactory;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Vendic\AdminPasswordPolicy\Exception\InvalidPasswordException;
 
@@ -46,8 +47,11 @@ class ValidatePasswordTest extends TestCase
     }
 
     /**
+     * The annotation is for PHPUnit 9, the attribute for PHPUnit 10 and later (12 ignores annotations).
+     *
      * @dataProvider dataProvider
      */
+    #[DataProvider('dataProvider')]
     public function testValidate(
         array $user,
         bool $exception
@@ -61,7 +65,7 @@ class ValidatePasswordTest extends TestCase
         $this->userResource->save($user);
     }
 
-    private function dataProvider(): array
+    public static function dataProvider(): array
     {
         $username = 'someUser';
         $firstName = 'John';
